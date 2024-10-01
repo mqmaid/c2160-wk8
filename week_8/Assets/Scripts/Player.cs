@@ -16,7 +16,8 @@ public class Player : MonoBehaviour
         action = controls.movement.playerMovement;
     }
 
-    void OnEnable() {
+    void OnEnable()
+    {
         action.Enable();
     }
 
@@ -48,10 +49,10 @@ public class Player : MonoBehaviour
 
         switch (y)
         {
-            case <0:
+            case < 0:
                 direction.y = -1;
                 break;
-            case >0:
+            case > 0:
                 direction.y = 1;
                 break;
             default:
@@ -60,6 +61,11 @@ public class Player : MonoBehaviour
         }
 
 
-        transform.Translate(speed * Vector3.right * Time.deltaTime);
+        transform.Translate(speed * direction * Time.deltaTime);
+    }
+
+    void OnDisable()
+    {
+        action.Disable();
     }
 }
