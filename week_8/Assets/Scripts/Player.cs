@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    private float speed = 1;
+    private float speed = 4;
     private Vector3 direction;
     private PlayerControls controls;
     private InputAction action;
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         float x = action.ReadValue<Vector2>().x;
-        float y = action.ReadValue<Vector2>().y;
+        float z = action.ReadValue<Vector2>().y;
 
         switch (x)
         {
@@ -47,16 +47,16 @@ public class Player : MonoBehaviour
 
         }
 
-        switch (y)
+        switch (z)
         {
             case < 0:
-                direction.y = -1;
+                direction.z = -1;
                 break;
             case > 0:
-                direction.y = 1;
+                direction.z = +1;
                 break;
             default:
-                direction.y = 0;
+                direction.z = 0;
                 break;
         }
 
