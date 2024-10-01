@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class UIManager : MonoBehaviour
         }
     }
     [SerializeField] private Text scoreText;
-    [SerializeField] private string scoreFormat = "Current Score: {0}";
+    [SerializeField] private string scoreFormat = "Score: {0}";
 
     void Awake() 
     {
