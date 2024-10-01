@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScoreKeeper : MonoBehaviour
 {
     static private ScoreKeeper instance;
-    static public ScoreKeeper Instance 
+    static private ScoreKeeper Instance 
     {
         get 
         {
@@ -18,7 +18,7 @@ public class ScoreKeeper : MonoBehaviour
     }
     //private Player player;
     private int score = 0;
-    public int Score 
+    private int Score 
     {
         get
         {
@@ -38,13 +38,13 @@ public class ScoreKeeper : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }        
     }
-    public void Start()
+    void Start()
     {
         score = 0;
       //  player = FindObjectOfType<Player>();
     }
 
-    public void GainScore()
+    void GainScore()
     {
         score += scorePoint;
     }
