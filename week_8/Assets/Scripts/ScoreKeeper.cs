@@ -5,27 +5,30 @@ using UnityEngine;
 public class ScoreKeeper : MonoBehaviour
 {
     static private ScoreKeeper instance;
-    static private ScoreKeeper Instance 
+    static public ScoreKeeper Instance 
     {
         get 
         {
             if (instance == null)
             {
-                Debug.LogError("There is no GameManager instance in the scene.");
+                Debug.LogError("There is no ScoreKeeper instance in the scene.");
             }
             return instance;
         }
     }
-    //private Player player;
+    private Player player;
     private int score = 0;
-    private int Score 
+    public int Score 
     {
         get
         {
             return score;
         }
+        set
+        {
+            score = value;
+        }
     }
-    [SerializeField] private int scorePoint = 10;
     void Awake()
     {
         if (instance != null) 
@@ -41,11 +44,6 @@ public class ScoreKeeper : MonoBehaviour
     void Start()
     {
         score = 0;
-      //  player = FindObjectOfType<Player>();
-    }
-
-    void GainScore()
-    {
-        score += scorePoint;
+        player = FindObjectOfType<Player>();
     }
 }

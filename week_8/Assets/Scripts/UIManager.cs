@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI score;
+    [SerializeField] private string scoreFormat = "Score: {0}";
     static private UIManager instance;
     static public UIManager Instance 
     {
@@ -17,9 +20,6 @@ public class UIManager : MonoBehaviour
             return instance;
         }
     }
-    [SerializeField] private Text scoreText;
-    [SerializeField] private string scoreFormat = "Score: {0}";
-
     void Awake() 
     {
         if (instance != null)
@@ -35,6 +35,6 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        scoreText.text = string.Format(scoreFormat, ScoreKeeper.Instance.Score);
+        score.text = string.Format(scoreFormat, ScoreKeeper.Instance.Score);
     }
 }
