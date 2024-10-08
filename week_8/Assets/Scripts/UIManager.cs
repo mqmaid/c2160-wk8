@@ -6,7 +6,8 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI score;
+    [SerializeField] private TextMeshProUGUI player1Score;
+    [SerializeField] private TextMeshProUGUI player2Score;
     [SerializeField] private string scoreFormat = "Score: {0}";
     static private UIManager instance;
     static public UIManager Instance 
@@ -35,6 +36,7 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        score.text = string.Format(scoreFormat, ScoreKeeper.Instance.Score);
+        player1Score.text = string.Format("Player 1 " + scoreFormat, ScoreKeeper.Instance.Player1Score);
+        player2Score.text = string.Format("Player 2 " + scoreFormat, ScoreKeeper.Instance.Player2Score);
     }
 }
