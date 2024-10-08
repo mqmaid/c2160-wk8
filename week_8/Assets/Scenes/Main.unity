@@ -207,11 +207,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5761596772009218099, guid: c9e249f106289934a952dd535fddd028, type: 3}
   m_PrefabInstance: {fileID: 5358888021080132956}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &611823734 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5814630871917338375, guid: 87c7ce41c5b3d1947a468f76fb1f2f0d, type: 3}
-  m_PrefabInstance: {fileID: 1714411890}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &656893809
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,12 +520,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651060265}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 6, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 7, z: 0}
+  m_LocalScale: {x: 1, y: 0.5000001, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 611823734}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1714411890
 PrefabInstance:
@@ -586,14 +581,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9107454914995248871, guid: 87c7ce41c5b3d1947a468f76fb1f2f0d, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Player1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5814630871917338375, guid: 87c7ce41c5b3d1947a468f76fb1f2f0d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1651060268}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87c7ce41c5b3d1947a468f76fb1f2f0d, type: 3}
 --- !u!1001 &1797496449
@@ -647,6 +639,10 @@ PrefabInstance:
     - target: {fileID: 9107454914995248871, guid: a1f36c7e55c9e58458914ab2cd609ec5, type: 3}
       propertyPath: m_Name
       value: Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107454914995248871, guid: a1f36c7e55c9e58458914ab2cd609ec5, type: 3}
+      propertyPath: m_TagString
+      value: Player2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -892,6 +888,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 656893811}
+  - {fileID: 1651060268}
   - {fileID: 1714411890}
   - {fileID: 1797496449}
   - {fileID: 416199802}
