@@ -17,16 +17,28 @@ public class ScoreKeeper : MonoBehaviour
         }
     }
     private Player player;
-    private int score = 0;
-    public int Score 
+    private int player1Score = 0;
+    public int Player1Score 
     {
         get
         {
-            return score;
+            return player1Score;
         }
         set
         {
-            score = value;
+            player1Score = value;
+        }
+    }
+    private int player2Score = 0;
+    public int Player2Score 
+    {
+        get
+        {
+            return player2Score;
+        }
+        set
+        {
+            player2Score = value;
         }
     }
     void Awake()
@@ -43,7 +55,8 @@ public class ScoreKeeper : MonoBehaviour
     }
     void Start()
     {
-        score = 0;
+        player2Score = 0;
+        player1Score = 0;
         player = FindObjectOfType<Player>();
     }
 }
