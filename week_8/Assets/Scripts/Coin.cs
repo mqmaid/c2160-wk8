@@ -6,11 +6,6 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {  
     [SerializeField] private int score = 10;
-<<<<<<< Updated upstream
-    void OnTriggerEnter(Collider collider) {
-        Destroy(gameObject);
-        ScoreKeeper.Instance.Score += score;
-=======
     void OnTriggerEnter(Collider collider)
     {
         string tag = collider.tag;
@@ -24,6 +19,5 @@ public class Coin : MonoBehaviour
                 ScoreKeeper.Instance.Player2Score += score;
                 break;
         }
->>>>>>> Stashed changes
     }
 }
